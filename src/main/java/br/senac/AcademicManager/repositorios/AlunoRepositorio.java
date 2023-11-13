@@ -8,7 +8,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-@RepositoryRestResource(path = "Aluno", collectionResourceRel = "Alunos")
+@Repository
 public interface AlunoRepositorio extends JpaRepository<Alunos, Long> {
 
     @Query("select c from Alunos c where lower(c.primeiroNome) like lower(concat(:termo, '%'))")
